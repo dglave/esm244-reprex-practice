@@ -1,0 +1,15 @@
+``` r
+library(tidyverse)
+library(palmerpenguins)
+
+#
+
+df_p <- penguins %>% 
+  arrange(-bill_depth_mm) %>% 
+  filter(island == "Biscoe", "Torgerson")
+#> Error: Problem with `filter()` input `..2`.
+#> x Input `..2` must be a logical vector, not a character.
+#> ℹ Input `..2` is `"Torgerson"`.
+```
+
+<sup>Created on 2021-02-11 by the [reprex package](https://reprex.tidyverse.org) (v1.0.0)</sup>
