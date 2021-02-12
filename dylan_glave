@@ -1,0 +1,23 @@
+``` r
+library(tidyverse)
+
+## Here is my *working* code Reprex
+
+df <- tribble(~name, ~weight, ~height,
+              "teddy", 52, 0.5,
+              "khora", 57, 0.6,
+              "waffle", 28, 0.4)
+## My problem: Filter()
+
+df_2 <- df %>% 
+  filter(name == c("teddy", "waffle"))
+#> Warning in name == c("teddy", "waffle"): longer object length is not a multiple
+#> of shorter object length
+
+ggplot(df, aes(x = height, y = weight)) +
+  geom_line()
+```
+
+![](https://i.imgur.com/LTz1t2d.png)
+
+<sup>Created on 2021-02-11 by the [reprex package](https://reprex.tidyverse.org) (v1.0.0)</sup>
